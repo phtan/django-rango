@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
 <html>
 
     <head>
@@ -9,5 +12,6 @@
         <h1>Rango says...</h1>
         hello world! <strong>{{ boldmessage }}</strong><br />
         <a href="/rango/about">About</a>
+        <img src="{% static "images/rango_movie.jpg" %}" alt="Picture of Rango the chameleon" /> <!-- New line -->
     </body>
 </html>
