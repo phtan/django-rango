@@ -7,7 +7,7 @@ django.setup()
 from rango.models import Category, Page
 
 def populate():
-    python_cat = add_cat('Python')
+    python_cat = add_cat('Python', 128, 64)
 
     add_page(cat=python_cat,
             title="Official Python tutorial",
@@ -17,7 +17,7 @@ def populate():
             title="How to think like a computer scientist",
             url="http://www.greenteapress.com/thinkpython/")
 
-    django_cat = add_cat("Django")
+    django_cat = add_cat("Django", 64, 32)
 
     add_page(cat=django_cat,
             title="Official Django Tutorial",
@@ -27,7 +27,7 @@ def populate():
             title="Django Rocks",
             url="http://www.djangorocks.com")
 
-    frame_cat = add_cat("Other frameworks")
+    frame_cat = add_cat("Other frameworks", 32, 16)
 
     add_page(cat=frame_cat,
             title="Bottle",
@@ -49,7 +49,7 @@ def add_page(cat, title, url, views=0):
     p.save()
     return p
 
-def add_cat(name):
+def add_cat(name, views=0, likes=0):
     c = Category.objects.get_or_create(name=name)[0]
     return c
 
