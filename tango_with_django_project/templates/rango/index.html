@@ -13,6 +13,7 @@
         hello world! <strong>{{ boldmessage }}</strong><br />
 
         {% if categories %}
+            <h3>Categories</h3>
             <ul>
                 {% for category in categories %}
                 <li><a href ='/rango/category/{{ category.slug }}'>{{ category.name }}</li>
@@ -21,6 +22,18 @@
         {% else %}
             <strong>There are no categories present.</strong>
         {% endif %}
+
+    {% if topViews %}
+            <h3>Top 5 most viewed pages</h3>
+            <ul>
+                {% for page in topViews %}
+                <li><a href = '{{ page.url }}'>{{ page.title }} (has {{ page.views }} view count)</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There is no list of the top 5 most viewed pages.</strong>
+        {% endif %}
+
         <a href="/rango/about">About</a>
         <img src="{% static "images/rango_movie.jpg" %}" alt="Picture of Rango the chameleon" /> <!-- New line -->
     </body>

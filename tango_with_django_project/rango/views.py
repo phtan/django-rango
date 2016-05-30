@@ -5,7 +5,8 @@ from rango.models import Category, Page
 def index(request):
 
     category_list = Category.objects.order_by('-likes')[:5]
-    context_dict = {'boldmessage': "I am bold font from the context", 'categories': category_list}
+    top_5_views_list = Page.objects.order_by('-views')[:5]
+    context_dict = {'boldmessage': "I am bold font from the context", 'categories': category_list, 'topViews': top_5_views_list}
 
 
     return render(request, 'rango/index.html', context_dict)
