@@ -16,7 +16,7 @@
             <h3>Categories</h3>
             <ul>
                 {% for category in categories %}
-                <li><a href ='/rango/category/{{ category.slug }}'>{{ category.name }}</li>
+                <li><a href ='/rango/category/{{ category.slug }}'>{{ category.name }}</a></li>
                 {% endfor %}
             </ul>
         {% else %}
@@ -34,7 +34,8 @@
             <strong>There is no list of the top 5 most viewed pages.</strong>
         {% endif %}
 
-        <a href="/rango/about">About</a>
+        <a href="/rango/about">About</a><br />
+        <h4>Mascot (of sorts)</h4>
         <img src="{% static "images/rango_movie.jpg" %}" alt="Picture of Rango the chameleon" /> <!-- New line -->
     </body>
 </html>
