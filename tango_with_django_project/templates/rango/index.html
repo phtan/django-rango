@@ -13,7 +13,7 @@
         hello world! <strong>{{ boldmessage }}</strong><br />
 
         {% if categories %}
-            <h3>Categories</h3>
+            <h3>5 categories</h3>
             <ul>
                 {% for category in categories %}
                 <li><a href ='/rango/category/{{ category.slug }}'>{{ category.name }}</a></li>
@@ -35,6 +35,7 @@
         {% endif %}
 
         <a href="/rango/about">About</a><br />
+        <a href="/rango/add_category/">Add a new Category</a><br />
         <h4>Mascot (of sorts)</h4>
         <img src="{% static "images/rango_movie.jpg" %}" alt="Picture of Rango the chameleon" /> <!-- New line -->
     </body>
