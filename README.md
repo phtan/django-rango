@@ -10,4 +10,4 @@ Although the guide comes with a [code repository](https://github.com/leifos/tang
 
 ## Attribution
 
-The image of Rango the movie character is hosted on Flickr under Creative Commons license. It is courtesy of user 'elbragon'.
+The image of Rango the movie character (in the folder *tango_with_django_project/static/images/*) is hosted on Flickr under Creative Commons license. It is courtesy of user 'elbragon'.
