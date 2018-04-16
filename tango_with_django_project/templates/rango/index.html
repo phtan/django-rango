@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+        {% if user.is_authenticated %}
+        <h1>Rango says... hello {{ user.username }}!</h1>
+        {% else %}
+        <h1>Rango says...</h1>
+        hello world! <strong>{{ boldmessage }}</strong><br />
+        {% endif %}
+
+        {% if categories %}
+            <h3>5 categories</h3>
+            <ul>
+                {% for category in categories %}
+                <li><a href ='{% url 'category' category.slug %}'>{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+
+    {% if topViews %}
+            <h3>Top 5 most viewed pages</h3>
+            <ul>
+                {% for page in topViews %}
+                <li><a href = '{{ page.url }}'>{{ page.title }} (has {{ page.views }} view count)</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There is no list of the top 5 most viewed pages.</strong>
+        {% endif %}
+
+{% endblock %}
