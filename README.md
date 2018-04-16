@@ -9,5 +9,5 @@ Although the guide comes with a [code repository](https://github.com/leifos/tang
 2. run `python manage.py runserver` in the directory that has **manage.py**
 
 ## Attribution
+
 The image of Rango the movie character is hosted on Flickr under Creative Commons license. It is courtesy of user 'elbragon'.
-=======
